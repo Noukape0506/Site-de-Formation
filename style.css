@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f6f0;
+    color: #37342e;
+    line-height: 1.6;
+}
+
+/* En-tête : logo, slogan et menu */
+.entete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 4%;
+    background: #eee7d9;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo span {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.menu ul {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #37342e;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Bannière avec image */
+.banniere {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.banniere img {
+    width: max-content;
+    height: max-content;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contenu-banniere {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+}
+
+.banniere br { display: none; }
+.banniere h1 { font-size: 35px; margin-bottom: 15px; }
+.banniere p { margin-bottom: 20px; }
+
+.bouton {
+    background: #8d7654;
+    color: white;
+    padding: 10px 22px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Formations */
+.section-formations {
+    padding: 40px 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.section-formations h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.forme {
+    background: white;
+    padding: 25px;
+    border: 1px solid #ddd0bb;
+    border-radius: 8px;
+}
+
+.forme h3 { color: #8d7654; }
+.duree { font-weight: bold; }
+
+/* Autres sections */
+.section-apropos {
+    padding: 35px 7%;
+    background: #eee7d9;
+}
+
+.section-apropos ul,
+.section-apropos ol {
+    padding-left: 25px;
+    margin-bottom: 20px;
+}
+
+.section-inscription {
+    padding: 35px 5%;
+    text-align: center;
+    background: #e4d8c4;
+}
+
+/* Footer */
+.foot {
+    background: #37342e;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.foot a { color: #e8dfce; }
+
+/* Adaptation aux téléphones */
+@media (max-width: 650px) {
+    .entete { flex-wrap: wrap; }
+    .logo span { max-width: 150px; }
+    .menu { width: 100%; }
+    .menu ul { justify-content: center; flex-wrap: wrap; gap: 12px; }
+    .section-formations { grid-template-columns: 1fr; }
+    .banniere h1 { font-size: 27px; }
+}
